@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5E2418">
+<title>Inscription – École de musique St Ephrem</title>
+<meta name="description" content="Inscrivez-vous à l'école de musique St Ephrem en moins de deux minutes.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sans-barre">
+<header>
+  <div class="wrap">
+    <a class="marque" href="index.html"><img src="logo.png" alt="Icône de saint Éphrem le Syrien"> St Ephrem</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav id="menu" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="instruments.html">Instruments</a><a href="ecole.html">L'école</a><a href="tarifs.html">Tarifs</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a class="btn" href="inscription.html" aria-current="page">S'inscrire</a></nav>
+  </div>
+</header>
+<div id="statut" role="status"></div>
+<main>
+<section class="titre-page"><div class="wrap"><h1>S'inscrire</h1><p>Remplissez le formulaire, puis payez : c'est tout pour commencer.</p></div></section>
+<section><div class="wrap">
+  <ol class="etapes" aria-label="Étapes de l'inscription">
+    <li>Remplir le formulaire</li>
+    <li>Payer par Wave ou Orange Money</li>
+    <li>Envoyer le dossier</li>
+    <li>Recevoir notre appel</li>
+  </ol>
+  <div class="insc-grille">
+    <div>
+      <form id="form" novalidate>
+        <div class="duo">
+          <div><label for="prenom">Prénom</label><input type="text" id="prenom" name="prenom" autocomplete="given-name"><div class="err" id="err-prenom"></div></div>
+          <div><label for="nom">Nom</label><input type="text" id="nom" name="nom" autocomplete="family-name"><div class="err" id="err-nom"></div></div>
+        </div>
+        <div><label for="tel">Téléphone <span class="aide">De l'élève ou du tuteur (idéalement avec WhatsApp)</span></label><input type="tel" id="tel" name="telephone" inputmode="tel" autocomplete="tel" placeholder="77 000 00 00"><div class="err" id="err-telephone"></div></div>
+        <div><span class="lbl">Instrument choisi</span>
+          <div class="choix" role="group" aria-label="Instrument">
+            <label><input type="radio" name="instrument" value="Piano"> Piano</label>
+            <label><input type="radio" name="instrument" value="Guitare"> Guitare</label>
+            <label><input type="radio" name="instrument" value="Batterie"> Batterie</label>
+          </div><div class="err" id="err-instrument"></div></div>
+        <div><span class="lbl">Êtes-vous chrétien ?</span>
+          <div class="choix deux" role="group" aria-label="Êtes-vous chrétien">
+            <label><input type="radio" name="chretien" value="oui"> Oui</label>
+            <label><input type="radio" name="chretien" value="non"> Non</label>
+          </div><div class="err" id="err-chretien"></div></div>
+        <div id="refus" class="msg non">L'inscription est réservée aux chrétiens. L'école suit la liturgie chrétienne, et chaque élève doit être chrétien pour s'inscrire.</div>
+        <div class="engage"><label><input type="checkbox" name="engagement"> <span>Je m'engage à respecter les règles de l'école, la discipline et la liturgie chrétienne.</span></label><div class="err" id="err-engagement"></div></div>
+        <button class="btn grand" id="envoi" type="submit">Envoyer mon inscription</button>
+      </form>
+
+      <div id="succes" tabindex="-1" role="status">
+        <h2>✓ Inscription enregistrée</h2>
+        <div class="recap">Élève : <span id="r-nom"></span><br>Instrument : <span id="r-inst"></span><br>Téléphone : <span id="r-tel"></span></div>
+        <p><strong>Il reste 2 choses à faire :</strong></p>
+        <ol>
+          <li><strong>Payer 25 000 FCFA</strong> (inscription + tenue) par Wave ou Orange Money au <strong>78 434 06 98</strong>.</li>
+          <li><strong>Envoyer la capture du paiement</strong> sur WhatsApp avec le bouton ci-dessous : votre message est déjà prêt.</li>
+        </ol>
+        <div class="actions-col">
+          <a class="btn vert grand" id="wa-envoi" href="#" target="_blank" rel="noopener">Envoyer la capture sur WhatsApp</a>
+          <button class="copier" type="button" data-copier="784340698">Copier le numéro de paiement</button>
+        </div>
+        <p style="margin-top:1rem">Nous vous appellerons ensuite pour valider. Vous recevrez votre reçu en PDF.</p>
+      </div>
+    </div>
+
+    <aside class="cote">
+      <div class="boite">
+        <h3>Combien ça coûte ?</h3>
+        <p><strong>25 000 FCFA</strong> à l'inscription (tenue comprise), puis <strong>15 000 FCFA / mois</strong> sur 8 mois.</p>
+      </div>
+      <div class="boite">
+        <h3>Où payer ?</h3>
+        <p>Wave ou Orange Money</p>
+        <div class="num"><b>78 434 06 98</b><button class="copier" type="button" data-copier="784340698">Copier</button></div>
+      </div>
+      <div class="boite">
+        <h3>Dossier à fournir après le paiement</h3>
+        <ul>
+          <li>Extrait de naissance</li>
+          <li>Photocopie de la pièce d'identité, pour ceux qui en ont une</li>
+          <li>Photo d'identité, si l'élève n'a pas de pièce d'identité</li>
+        </ul>
+      </div>
+      <div class="boite">
+        <h3>Une question ?</h3>
+        <p><a class="btn vert" href="https://wa.me/221784340698">Écrire sur WhatsApp</a></p>
+      </div>
+    </aside>
+  </div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="grille">
+      <div class="f-marque"><a class="marque f-logo" href="index.html"><img src="logo.png" alt=""> St Ephrem</a><p>École de musique chrétienne : piano, guitare et batterie, dans la discipline et la liturgie.</p></div>
+      <div class="f-pages"><h3>Pages</h3><div class="f-liens"><a href="index.html">Accueil</a><a href="instruments.html">Instruments</a><a href="ecole.html">L'école</a><a href="tarifs.html">Tarifs</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="inscription.html">Inscription</a></div></div>
+      <div class="f-contact"><h3>Nous joindre</h3><a class="f-btn" href="https://wa.me/221784340698">💬 78 434 06 98</a><a class="f-btn" href="https://wa.me/221772266986">💬 77 226 69 86</a><p>📍 Jaxaay PA, Unité 12<br>Derrière le rond-point du marché Mardi</p></div>
+    </div>
+    <p class="copy">© École de musique St Ephrem</p>
+  </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/inscription.js"></script>
+</body>
+</html>
